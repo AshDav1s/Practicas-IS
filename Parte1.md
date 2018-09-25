@@ -128,7 +128,7 @@ Complementar último commit:
 
 Recuperar version de un fichero de commit antiguo:
 
-	git checkout
+	git checkout <id_coommit> -- nombre_archivo
 
 
 
