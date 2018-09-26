@@ -16,7 +16,7 @@ Añadir cambios del repositorio local a remoto:
    
     git push -u origin master
 	
-Añadir cambios del repositorio remoto al local
+Añadir cambios del repositorio remoto al local:
    
     git pull
 	
@@ -25,9 +25,11 @@ Ver *branches* remotos:
     git branch -r
 	
 Ver todos los *branches*:
+
     git branch -a
 	
 Clonar un repositorio remoto:
+
     git clone url
 	
 
@@ -35,36 +37,38 @@ Clonar un repositorio remoto:
 
 * LOCAL -> REMOTO 
 	
-	1. Cambios en el repositorio local. 
-	2. Commit de los cambios. 
-	3. Añadir cambios a repositorio remoto.
+   1. Cambios en el repositorio local. 
+   2. Commit de los cambios. 
+   3. Añadir cambios a repositorio remoto.
       
-    git push
+            git push
 	
+
 * REMOTO -> LOCAL
-	* Sincronizacion y unión:
+    * Sincronizacion y unión:
       
-    git fetch origin
-    git merge origin/master
+            git fetch origin
+            git merge origin/master
       
-* En un solo paso:
-    
-    git pull
+    * En un solo paso:
+
+            git pull
 		
 # Operaciones con *branches* remotos
 
 * Creación:
-	1. Crear branch local.
-	2. Hacer cambios en dicho branch.
-	3. hacer commit.
-	4. Copiar branch al repositorio remoto:
-      
-    git push -u origin branch_remoto
+   1. Crear branch local.
+
+   2. Hacer cambios en dicho branch.
+   3. Hacer commit.
+   4. Copiar branch al repositorio remoto:
+
+            git push -u origin branch_remoto
 		
 * Copia:
-   
-    git checkout-b local remoto
+
+        git checkout -b local remoto
    
 * Eliminación:
-   
-    git push origin --delete branch_remoto
+
+        git push origin --delete branch_remoto
