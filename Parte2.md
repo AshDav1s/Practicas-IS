@@ -9,7 +9,7 @@ Es la forma para separar la línea actual de desarrollo con respecto a la princi
 Ver listado de ramas:
 
     git branch
-    
+
 Crear una rama:
 
     git branch nombre_rama
