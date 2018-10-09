@@ -77,3 +77,5 @@ La ordenación se podrá realizar tanto de forma ascendente como descendente.
 
 * **RNF12:** No se permitirá introducir dos alumnos con el mismo DNI, por tanto este se utilizará como identificador principal de los alumnos.
 
+* **RNF13:** El lenguaje utilizado para implementar el software debe ser C++.
+
