@@ -37,6 +37,7 @@
 	* Grupo al que pertenecen
 	* Líder / No líder
 	
+	
 La ordenación se podrá realizar tanto de forma ascendente como descendente.
 
 ### REQUISITOS NO FUNCIONALES
@@ -50,7 +51,29 @@ La ordenación se podrá realizar tanto de forma ascendente como descendente.
 * **RNF4:** Se permitirá la existencia de grupos sin líder.
 
 * **RNF5:** La interfaz del programa se mostrará a través de línea de comandos.
+	* **RNF5.1:** La interfaz será lo más sencilla y usable posible.
+	* **RNF5.2:** La interfaz constará de un menú principal que permita acceder a las demás funcionalidades del programa.
 
 * **RNF6:** Se dispondrá de un software diferente para cada profesor, de manera que no será necesario un login.
 
-* **RNF7:** 
+* **RNF7:** Los grupos no tendrán un límite de alumnos.
+
+* **RNF8:** El sistema no podrá almacenar más de 150 alumnos.
+
+* **RNF9:** El programa deberá mostrarse como mínimo en idioma español.
+
+* **RNF10:** La longitud máxima de los campos a almacenar será la siguiente:
+	* Nombre: 50 caracteres
+	* Apellidos: 50 caracteres
+	* DNI: 9 caracteres
+	* Email: 50 caracteres
+	* Dirección: 100 caracteres
+	* Curso más alto matriculado: 1 caracter numérico
+	* Fecha de nacimiento: 10 caracteres
+	* Equipo: 3 caracteres numéricos
+	* Líder: booleano
+
+* **RNF11:** El programa imprimirá las listas solicitadas por línea de comandos o en un fichero HTML.
+
+* **RNF12:** No se permitirá introducir dos alumnos con el mismo DNI, por tanto este se utilizará como identificador principal de los alumnos.
+
