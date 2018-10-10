@@ -4,19 +4,19 @@
 
 **ID:** 001 **Introducir alumno**
 
-## 
+---- 
 
 Como usuario quiero introducir los datos de un alumno para almacenarlos y poder consultarlos posteriormente.
 
 **Prioridad:** 1
+
+----
 
 ## (REVERSO) 
 
 * Quiero poder introducir el DNI, nombre, apellidos, teléfono, email, dirección, curso y fecha de nacimiento.
 
 * De forma opcional, quiero poder introducir el equipo y si es líder o no.
-
-##
 
 ----
 
@@ -34,11 +34,13 @@ Como usuario quiero introducir los datos de un alumno para almacenarlos y poder 
 
 **ID:** 002 **Listar alumnos**
 
-##
+----
 
 Como usuario quiero ver una lista con todos los alumnos introducidos.
 
 **Prioridad:** 2
+
+----
 
 ## (REVERSO)
 
@@ -64,11 +66,13 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 
 **ID:** 003 **Buscar alumno**
 
-##
+----
 
 Como usuario quiero buscar un alumno para mostrar sus datos.
 
 **Prioridad:** 3
+
+----
 
 ## (REVERSO)	
 
@@ -94,11 +98,13 @@ Como usuario quiero buscar un alumno para mostrar sus datos.
 
 **ID:** 004 **Editar alumno**
 
-##
+----
 
 Como usuario quiero seleccionar un alumno para poder editar sus datos sin modificar el resto.
 
 **Prioridad:** 6
+
+----
 
 ## (REVERSO)
 
@@ -124,11 +130,13 @@ Como usuario quiero seleccionar un alumno para poder editar sus datos sin modifi
 
 **ID:** 005 **Borrar alumno**
 
-##
+----
 
 Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 
 **Prioridad:** 4
+
+----
 
 ## (REVERSO)
 
@@ -152,12 +160,16 @@ Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 
 **ID:** 006 **Cargar o exportar ficheros binarios**
 
-##
+----
 
 Como usuario quiero cargar un fichero que contenga un conjunto de alumnos o guardar el actual.
 
 **Prioridad:** 5
 
+----
+
 ## (REVERSO)
 
 * Quiero poder elegir nombre para el fichero a guardar
+
+----
