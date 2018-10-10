@@ -12,7 +12,9 @@ Como usuario quiero introducir los datos de un alumno para almacenarlos y poder 
 
 ----
 
-## (REVERSO) 
+## (REVERSO)
+
+---- 
 
 * Quiero poder introducir el DNI, nombre, apellidos, teléfono, email, dirección, curso y fecha de nacimiento.
 
@@ -24,11 +26,6 @@ Como usuario quiero introducir los datos de un alumno para almacenarlos y poder 
 
 ----
 
-----
-
-----
-
-----
 
 ## (ANVERSO)
 
@@ -44,6 +41,8 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 
 ## (REVERSO)
 
+----
+
 * Quiero poder mostrar los alumnos de dos formas distintas:
 	* **Simple**: mostrando nombre, apellidos, grupo y líder
 	* **Completa**: mostrando todos los campos introducidos
@@ -56,11 +55,6 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 
 ----
 
-----
-
-----
-
-----
 	
 ## (ANVERSO)
 
@@ -76,6 +70,8 @@ Como usuario quiero buscar un alumno para mostrar sus datos.
 
 ## (REVERSO)	
 
+----
+
 * Quiero buscar un alumno según su DNI, apellidos o email
 
 * Se mostrarán todos los datos del alumno
@@ -88,11 +84,6 @@ Como usuario quiero buscar un alumno para mostrar sus datos.
 
 ----
 
-----
-
-----
-
-----
 
 ## (ANVERSO)
 
@@ -108,6 +99,8 @@ Como usuario quiero seleccionar un alumno para poder editar sus datos sin modifi
 
 ## (REVERSO)
 
+----
+
 * Quiero poder elegir un alumno según su DNI, apellidos o email
 
 * Si dos alumnos comparten apellido, quiero elegir qué alumno editar
@@ -120,11 +113,6 @@ Como usuario quiero seleccionar un alumno para poder editar sus datos sin modifi
 
 ----
 
-----
-
-----
-
-----
 
 ## (ANVERSO)
 
@@ -135,41 +123,5 @@ Como usuario quiero seleccionar un alumno para poder editar sus datos sin modifi
 Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 
 **Prioridad:** 4
-
-----
-
-## (REVERSO)
-
-* Quiero poder elegir un alumno según su DNI, apellidos o email
-
-* Si dos alumnos comparten apellido, quiero elegir qué alumno borrar
-
-----
-
-----
-
-----
-
-----
-
-----
-
-----
-
-## (ANVERSO)
-
-**ID:** 006 **Cargar o exportar ficheros binarios**
-
-----
-
-Como usuario quiero cargar un fichero que contenga un conjunto de alumnos o guardar el actual.
-
-**Prioridad:** 5
-
-----
-
-## (REVERSO)
-
-* Quiero poder elegir nombre para el fichero a guardar
 
 ----
