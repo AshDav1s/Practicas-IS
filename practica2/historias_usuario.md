@@ -47,7 +47,8 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 	* **Simple**: mostrando nombre, apellidos, grupo y líder
 	* **Completa**: mostrando todos los campos introducidos
 	
-* Los alumnos serán ordenados según el parámetro que el usuario seleccione	
+* Los alumnos serán ordenados según el parámetro que el usuario seleccione
+
 
 ----
 
@@ -58,7 +59,7 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 	
 ## (ANVERSO)
 
-**ID:** 003 **Buscar alumno**
+**ID:** 003 **Mostrar alumno**
 
 ----
 
@@ -122,7 +123,7 @@ Como usuario quiero seleccionar un alumno para poder editar sus datos sin modifi
 
 Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 
-**Prioridad:** 4
+**Prioridad:** 5
 
 ----
 
@@ -133,3 +134,56 @@ Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 * Quiero poder elegir un alumno segun su DNI, apellidos o email.
 
 * Será necesario una pregunta de confirmación para eliminar un alumno.
+
+----
+
+----
+
+----
+
+
+## (ANVERSO)
+
+**ID:** 006 **Cargar fichero**
+
+----
+
+Como usuario quiero seleccionar un fichero binario para poder cargar sus datos.
+
+**Prioridad:** 4
+
+----
+
+## (REVERSO)
+
+----
+
+* Quiero poder cargar una lista de alumnos a partir de un fichero binario.
+
+* El programa preguntará al usuario si quiere sobrescribir el fichero actual, si procede.
+
+----
+
+----
+
+----
+
+## (ANVERSO)
+
+**ID:** 007 **Guardar fichero**
+
+----
+
+Como usuario quiero seleccionar un nombre de fichero para guardar la lista de alumnos actual. 
+
+**Prioridad:** 4
+
+----
+
+## (REVERSO)
+
+----
+
+* Quiero poder guardar la lista de alumnos actual en un fichero binario.
+
+* El programa preguntará al usuario si quiere sobrescribir el fichero introducido, si procede.
