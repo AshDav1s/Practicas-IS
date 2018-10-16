@@ -125,3 +125,11 @@ Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 **Prioridad:** 4
 
 ----
+
+## (REVERSO)
+
+----
+
+* Quiero poder elegir un alumno segun su DNI, apellidos o email.
+
+* Será necesario una pregunta de confirmación para eliminar un alumno.
