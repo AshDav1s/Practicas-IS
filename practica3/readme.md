@@ -8,6 +8,8 @@ Las clases grupo y listaGrupo tienen como propósito llevar un control sobre los
 
 La clase profesor existe con el propósito de diferenciar a los profesores según sean coordinadores o ayudantes.
 
+![Diagrama de clase][Class Diagram1.jpg]
+
 ## Diagrama de secuencia
 
 Se han realizado un total de 9 diagramas de secuencia, correspondientes a las principales funcionalidades del programa. Se han tenido en cuenta los flujos alternativos correspondientes a comprobaciones, permisos, privilegios, etc. 
