@@ -13,3 +13,13 @@ La clase profesor existe con el propósito de diferenciar a los profesores segú
 ## Diagrama de secuencia
 
 Se han realizado un total de 9 diagramas de secuencia, correspondientes a las principales funcionalidades del programa. Se han tenido en cuenta los flujos alternativos correspondientes a comprobaciones, permisos, privilegios, etc. 
+
+![Diagrama de secuencia](./imagenes/Iniciar sesión.jpg)
+![Diagrama de secuencia](./imagenes/Introducir alumno.jpg)
+![Diagrama de secuencia](./imagenes/Mostrar alumno.jpg)
+![Diagrama de secuencia](./imagenes/Borrar alumno.jpg)
+![Diagrama de secuencia](./imagenes/Editar alumno.jpg)
+![Diagrama de secuencia](./imagenes/Listar.jpg)
+![Diagrama de secuencia](./imagenes/Cargar fichero.jpg)
+![Diagrama de secuencia](./imagenes/Guardar fichero.jpg)
+![Diagrama de secuencia](./imagenes/Guardar copia de seguridad.jpg)
