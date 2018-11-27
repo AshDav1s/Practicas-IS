@@ -8,7 +8,7 @@ Las clases grupo y listaGrupo tienen como propósito llevar un control sobre los
 
 La clase profesor existe con el propósito de diferenciar a los profesores según sean coordinadores o ayudantes.
 
-![Diagrama de clase][imagenes/Class Diagram1.jpg]
+![Diagrama de clase][./imagenes/Class Diagram1.jpg]
 
 ## Diagrama de secuencia
 
