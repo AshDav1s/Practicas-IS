@@ -1,3 +1,13 @@
+**ID**: 008
+
+**Titulo**: Funciones auxiliares
+
+**Descripción: ---
+
+**Prioridad: -**
+
+**Duración**: 2.5h
+
 **ID**: 002
 
 **Título**: Introducir alumno
@@ -6,7 +16,7 @@
 
 **Prioridad**: **1**
 
-**Duración**: 2h
+**Duración**: 3.5h
 
 ----
 
@@ -18,7 +28,7 @@
 
 **Prioridad**: **2**
 
-**Duración**: 5h
+**Duración**: 3.5h
 
 ----
 
