@@ -2,10 +2,10 @@
 
 ### Introducir alumno
 
-**ID:** 001
+**ID:** 001  
 **Breve descripción**: El usuario introduce los datos de un alumno.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Alumno.
 
 **Precondiciones:**
@@ -25,10 +25,8 @@
 
 **Flujos alternativos:**
 
-2.a. Si el alumno introducido es líder del grupo, se preguntará si se desea sobreescribir el anterior líder en caso de que este exista.
-
-3.a. Si ya existe un alumno con el DNI introducido para el nuevo alumno, el sistema muestra un mensaje de error y el alumno no se introduce.
-
+2.a. Si el alumno introducido es líder del grupo, se preguntará si se desea sobreescribir el anterior líder en caso de que este exista.  
+3.a. Si ya existe un alumno con el DNI introducido para el nuevo alumno, el sistema muestra un mensaje de error y el alumno no se introduce.  
 3.b. Si el valor de alguno de los campos del alumno no es válido, el sistema muestra un mensaje de error y el alumno no se introduce.
 
 
@@ -36,10 +34,10 @@
 
 ### Buscar alumno
 
-**ID:** 002
+**ID:** 002  
 **Breve descripción**: El sistema busca los datos de un alumno.
 
-**Actores principales:** Ninguno.
+**Actores principales:** Ninguno.  
 **Actores secundarios:** Alumno.
 
 **Precondiciones:** 
@@ -64,10 +62,10 @@
 
 ### Listar alumnos
 
-**ID:** 003
+**ID:** 003  
 **Breve descripción**: El sistema muestra una lista con todos los alumnos.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Alumno,
 
 **Precondiciones:**
@@ -95,10 +93,10 @@
 
 ### Mostrar alumno
 
-**ID:** 004
+**ID:** 004  
 **Breve descripción**: El sistema muestra los datos de un alumno concreto.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Alumno.
 
 **Precondiciones:** 
@@ -126,10 +124,10 @@
 
 ### Editar alumno
 
-**ID:** 005
+**ID:** 005  
 **Breve descripción**: El usuario edita los datos de un alumno.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Alumno.
 
 **Precondiciones:** 
@@ -148,8 +146,7 @@
 
 **Flujos alternativos:**
 
-3.a. Si el valor del parámetro no es válido, el sistema muestra un mensaje de error.
-
+3.a. Si el valor del parámetro no es válido, el sistema muestra un mensaje de error.  
 3.b. Si el parametro a editar es el de Líder, en caso afirmativo, se preguntará si se desea sobreescribir el anterior.
 
 
@@ -157,10 +154,10 @@
 
 ### Borrar alumno
 
-**ID:** 006
+**ID:** 006  
 **Breve descripción**: El usuario borra los datos de un alumno.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Alumno.
 
 **Precondiciones:** 
@@ -183,10 +180,10 @@
 
 ### Cargar fichero
 
-**ID:** 007
+**ID:** 007  
 **Breve descripción**: El usuario carga un fichero binario.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Ninguno.
 
 **Precondiciones:** 
@@ -204,8 +201,7 @@
 
 **Flujos alternativos:**
 
-2.a. Si el fichero no existe, el sistema muestra un mensaje de error.
-
+2.a. Si el fichero no existe, el sistema muestra un mensaje de error.  
 2.b. Si ya existen datos de alumnos en el sistema, éste pregunta si se desea sobreescribir dichos datos.
 
 
@@ -213,10 +209,10 @@
 
 ### Guardar fichero
 
-**ID:** 008
+**ID:** 008  
 **Breve descripción**: El usuario guarda un fichero binario con todos los alumnos.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Ninguno.
 
 **Precondiciones:** Ninguna.
@@ -239,10 +235,10 @@
 
 ### Guardar copia de seguridad
 
-**ID:** 009
+**ID:** 009  
 **Breve descripcion:** El usuario, si es Coordinador, podrá guardar una copia de seguridad.
 
-**Actores principales:** Usuario Coordinador.
+**Actores principales:** Usuario Coordinador.  
 **Actores secundarios:** Ninguno.
 
 **Precondiciones:** 
@@ -267,10 +263,10 @@
 
 ### Cargar copia de seguridad
 
-**ID:** 010
+**ID:** 010  
 **Breve descripcion:** El usuario, si es Coordinador, podrá cargar una copia de seguridad.
 
-**Actores principales:** Usuario Coordinador.
+**Actores principales:** Usuario Coordinador.  
 **Actores secundarios:** Ninguno.
 
 **Precondiciones:** 
@@ -296,10 +292,10 @@
 
 ### Iniciar sesión
 
-**ID:** 011
+**ID:** 011  
 **Breve descripcion:** El usuario iniciara sesión en el programa con su login y contraseña.
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Ninguno.
 
 **Precondiciones:** 
