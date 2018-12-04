@@ -1,4 +1,4 @@
-## Sprint backlog - Semana 2 (?h)
+## Sprint backlog - Semana 2 (5h)
 
 #### Emilio Luna Mejías
 
