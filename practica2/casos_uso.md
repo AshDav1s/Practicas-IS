@@ -26,7 +26,9 @@
 **Flujos alternativos:**
 
 2.a. Si el alumno introducido es líder del grupo, se preguntará si se desea sobreescribir el anterior líder en caso de que este exista.
+
 3.a. Si ya existe un alumno con el DNI introducido para el nuevo alumno, el sistema muestra un mensaje de error y el alumno no se introduce.
+
 3.b. Si el valor de alguno de los campos del alumno no es válido, el sistema muestra un mensaje de error y el alumno no se introduce.
 
 
@@ -147,6 +149,7 @@
 **Flujos alternativos:**
 
 3.a. Si el valor del parámetro no es válido, el sistema muestra un mensaje de error.
+
 3.b. Si el parametro a editar es el de Líder, en caso afirmativo, se preguntará si se desea sobreescribir el anterior.
 
 
@@ -202,6 +205,7 @@
 **Flujos alternativos:**
 
 2.a. Si el fichero no existe, el sistema muestra un mensaje de error.
+
 2.b. Si ya existen datos de alumnos en el sistema, éste pregunta si se desea sobreescribir dichos datos.
 
 
@@ -312,4 +316,4 @@
 
 **Flujos alternativos:**
 
-1. Si el login o la contraseña introducidos no están dentro del fichero de login, el sistema muestra un mensaje de error.
+1.a. Si el login o la contraseña introducidos no están dentro del fichero de login, el sistema muestra un mensaje de error.
