@@ -8,7 +8,10 @@
 **Actores principales:** Usuario.
 **Actores secundarios:** Alumno.
 
-**Precondiciones:** Ninguna.
+**Precondiciones:**
+
+1. El usuario no puede existir anteriormente en el sistema.
+2. Tanto DNI como email no pueden coincidir con los de otros alumnos.
 
 **Flujo principal:** 
 
@@ -22,6 +25,7 @@
 
 **Flujos alternativos:**
 
+2.a. Si el alumno introducido es líder del grupo, se preguntará si se desea sobreescribir el anterior líder en caso de que este exista.
 3.a. Si ya existe un alumno con el DNI introducido para el nuevo alumno, el sistema muestra un mensaje de error y el alumno no se introduce.
 3.b. Si el valor de alguno de los campos del alumno no es válido, el sistema muestra un mensaje de error y el alumno no se introduce.
 
@@ -143,6 +147,7 @@
 **Flujos alternativos:**
 
 3.a. Si el valor del parámetro no es válido, el sistema muestra un mensaje de error.
+3.b. Si el parametro a editar es el de Líder, en caso afirmativo, se preguntará si se desea sobreescribir el anterior.
 
 
 
@@ -162,13 +167,15 @@
 **Flujo principal:** 
 
 1. El caso de uso comienza cuando el sistema necesita borrar un alumno.
-2. El sistema busca el alumno (CU 002).
+2. El sistema busca el alumno por su DNI o por su email.
 
 **Postcondiciones:**
 
 * El alumno seleccionado no existe dentro del sistema.
 
-**Flujos alternativos:** Ninguno.
+**Flujos alternativos:** 
+
+2.a Si no existe el alumno buscado, el sistema mostrará mensaje de error.
 
 
 ### Cargar fichero
@@ -194,8 +201,8 @@
 
 **Flujos alternativos:**
 
-2.a. Si ya existen datos de alumnos en el sistema, éste pregunta si se desea sobreescribir dichos datos.
-2.b. Si el fichero no existe, el sistema muestra un mensaje de error.
+2.a. Si el fichero no existe, el sistema muestra un mensaje de error.
+2.b. Si ya existen datos de alumnos en el sistema, éste pregunta si se desea sobreescribir dichos datos.
 
 
 
@@ -223,3 +230,86 @@
 
 2.a. Si el fichero a guardar ya existe, el sistema pregunta si se desea sobreescribir el archivo.
 
+
+
+
+### Guardar copia de seguridad
+
+**ID:** 009
+**Breve descripcion:** El usuario, si es Coordinador, podrá guardar una copia de seguridad.
+
+**Actores principales:** Usuario Coordinador.
+**Actores secundarios:** Ninguno.
+
+**Precondiciones:** 
+
+1. Que el usuario sea Coordinador.
+
+**Flujo principal:** 
+
+1. El caso de uso comienza cuando el sistema necesita guardar una copia de seguridad.
+2. El sistema pregunta por el nombre del fichero a guardar.
+
+**Postcondiciones:**
+
+* Debe existir un fichero copia de seguridad con los datos de todos los alumnos.
+
+**Flujos alternativos:**
+
+2.a. Si el fichero a guardar ya existe, el sistema pregunta si se desea sobreescribir el archivo.
+
+
+
+
+### Cargar copia de seguridad
+
+**ID:** 010
+**Breve descripcion:** El usuario, si es Coordinador, podrá cargar una copia de seguridad.
+
+**Actores principales:** Usuario Coordinador.
+**Actores secundarios:** Ninguno.
+
+**Precondiciones:** 
+
+1. Que el usuario sea Coordinador.
+2. Debe existir un fichero copia de seguridad con los datos de todos los alumnos.
+
+**Flujo principal:** 
+
+1. El caso de uso comienza cuando el sistema necesita cargar una copia de seguridad.
+2. El sistema pregunta por el nombre del fichero a cargar.
+
+**Postcondiciones:**
+
+* El fichero copia de seguridad está cargado en el sistema.
+
+**Flujos alternativos:**
+
+2.a. Si el fichero a cargar no existe, el sistema muestra un mensaje de error.
+
+ 
+
+
+### Iniciar sesión
+
+**ID:** 011
+**Breve descripcion:** El usuario iniciara sesión en el programa con su login y contraseña.
+
+**Actores principales:** Usuario.
+**Actores secundarios:** Ninguno.
+
+**Precondiciones:** 
+
+1. Que el usuario esté introducido en el fichero de login.
+
+**Flujo principal:** 
+
+1. El caso de uso comienza cuando el sistema requiere de un usuario y contraseña para iniciar sesión.
+
+**Postcondiciones:**
+
+* Debe iniciarse el programa con la sesion personal del usuario.
+
+**Flujos alternativos:**
+
+1. Si el login o la contraseña introducidos no están dentro del fichero de login, el sistema muestra un mensaje de error.
