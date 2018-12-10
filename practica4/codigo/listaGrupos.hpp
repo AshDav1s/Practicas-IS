@@ -7,14 +7,14 @@ class ListaGrupos {
 	
 	private:
 	
-		list<Grupo> _grupos;
+		vector<Grupo> _grupos;
 		
 	public:
 	
 		ListaGrupos(){}
 		
 		// Busca un grupo por su ID
-		const Grupo & buscarGrupo(int id);
+		Grupo * buscarGrupo(int id);
 		
 		// Crea un grupo y lo inserta en la lista
 		bool crearGrupo(int id);

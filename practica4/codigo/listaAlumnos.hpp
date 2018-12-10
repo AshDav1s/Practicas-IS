@@ -2,18 +2,20 @@
 #define LISTA_ALUMNOS_HPP
 
 #include "alumno.hpp"
-#include <list>
+#include <vector>
 
 class ListaAlumnos {
 
 	private:
 		
-		list<Alumno> _alumnos;
+		vector<Alumno> _alumnos;
 		
 	public:
 		
 		// Constructor
-		ListaAlumnos(){}
+		ListaAlumnos() {
+			_alumnos.resize(0);
+		}
 		
 		// Imprime por pantalla todos los alumnos de la lista
 		void listarAlumnos();
@@ -25,13 +27,13 @@ class ListaAlumnos {
 		bool eliminarAlumno(string dni);
 		
 		// Busca un alumno mediante su DNI
-		const Alumno & buscarAlumno(string dni);
+		Alumno * buscarAlumno(string dni);
 		
 		// Busca un alumno mediante su email
-		const Alumno & buscarAlumnoEmail(string email);
+		Alumno * buscarAlumnoEmail(string email);
 		
-		// Devuelve una lista con todos los alumnos cuyos apellidos corresponden con el argumento
-		list<Alumno> buscarAlumnoApellidos(string apellidos);
+		// Devuelve un vector con todos los alumnos cuyos apellidos corresponden con el argumento
+		vector<Alumno> buscarAlumnoApellidos(string apellidos);
 		
 		// Comprueba si existe un alumno mediante su DNI
 		bool existeAlumno(string DNI);
