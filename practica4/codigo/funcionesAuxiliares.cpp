@@ -1,6 +1,80 @@
 #include "funcionesAuxiliares.hpp"
 #include <string.h>
 
+void opcionListar(ListaAlumnos & alumnos) {
+	
+	int lista, param, orden, html;
+	
+	if(alumnos.estaVacia())
+		cout << "\n\tLa lista de alumnos está vacía." << endl;
+		
+	else {
+		
+		do {
+			cout << "\n\t¿Desea mostrar lista simple o completa?" << endl;
+			cout << "\t\t[1] Simple" << endl;
+			cout << "\t\t[2] Completa" << endl;
+			cout << "\t\t";
+	
+			cin >> lista;
+	
+		} while(lista != 1  and  lista != 2);
+		
+		do {
+			cout << "\n\t¿Según qué parámetro desea ordenar la lista?" << endl;
+			cout << "\t\t[1] Nombre" << endl;
+			cout << "\t\t[2] Apellidos" << endl;
+			cout << "\t\t[3] DNI" << endl;
+			cout << "\t\t[4] Curso" << endl;
+			cout << "\t\t[5] Grupo" << endl;
+			cout << "\t\t[6] Líder" << endl;
+			
+			cout << "\t\t";
+	
+			cin >> param;
+	
+		} while(param < 1  and  param > 6);
+
+		do {
+			cout << "\n\t¿Desea ordenarla ascendente o descendentemente?" << endl;
+			cout << "\t\t[1] Ascendente" << endl;
+			cout << "\t\t[2] Descendente" << endl;
+			cout << "\t\t";
+	
+			cin >> orden;
+	
+		} while(orden != 1  and  orden != 2);
+
+		do {
+			cout << "\n\t¿Desea imprimir por terminal o en un fichero .html?" << endl;
+			cout << "\t\t[1] Terminal" << endl;
+			cout << "\t\t[2] HTML" << endl;
+			cout << "\t\t";
+	
+			cin >> html;
+	
+		} while(html != 1  and  html != 2);		
+		
+		
+		cout << CLEAR_SCREEN;
+		
+		LUGAR(5,7);
+		
+		if(html == 1)
+			alumnos.listarAlumnos(lista, param, orden);
+		
+		else {
+			
+			char fichero[50];
+			cout << "\n\tNombre del fichero: ";
+			cin >> fichero;
+			alumnos.listarAlumnosHTML(fichero, lista, param, orden);
+		}
+		
+		cin.ignore();	
+	}
+}
+
 void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	
 	struct date fecha;
@@ -104,6 +178,10 @@ void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 		bool check = false;
 		
 		if(auxiliar == 1) {
+		
+			if(grupo->getLider() != NULL) 
+				grupo->getLider()->setLider(false);
+				
 			a.setLider(true);
 			check = alumnos.insertarAlumno(a);
 			grupo->setLider(alumnos.buscarAlumno(a.getDNI()));

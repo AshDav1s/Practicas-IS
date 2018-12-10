@@ -25,7 +25,7 @@ int main() {
 
 			case 1: 
 				cout << "[1] Listar alumnos" << endl;
-
+				opcionListar(alumnos);
 			break;
 					
 			case 2: 

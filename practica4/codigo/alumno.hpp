@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 struct date {
 	int d;
@@ -33,7 +34,7 @@ class Alumno {
 		Alumno(string dni="", string nombre="", string apellidos="", int telefono=-1, string email="", string direccion="", int curso=-1, int dia=-1, int mes=-1, int year=-1, int IDgrupo = -1, bool lider = false);
 		
 		// Imprime por pantalla los atributos del alumno
-		void imprimirAlumno();
+		void imprimirAlumno(int s);
 		
 		// Funciones "get". Devuelven el valor de cada uno de los atributos del alumno
 		

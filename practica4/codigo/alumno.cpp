@@ -16,23 +16,26 @@ Alumno::Alumno(string dni, string nombre, string apellidos, int telefono, string
 	_lider = lider;
 }
 
-void Alumno::imprimirAlumno() {
+void Alumno::imprimirAlumno(int s) {
 
-	cout << "Nombre: " << getNombre() << endl;
-	cout << "Apellidos: " << getApellidos() << endl;
-	cout << "DNI: " << getDNI() << endl;
-	cout << "Teléfono: " << getTelefono() << endl;
-	cout << "Email: " << getEmail() << endl;
-	cout << "Dirección: " << getDireccion() << endl;
-	cout << "Curso más alto: " << getCurso() << endl;
-	cout << "Fecha de nacimiento: " << getFecha().d << "-" << getFecha().m << "-" << getFecha().y << endl;
-	cout << "Grupo: " << getIDgrupo() << endl;
-	cout << "Líder: ";
+	cout << "\tNombre: " << getNombre() << endl;
+	cout << "\tApellidos: " << getApellidos() << endl;
 	
-	if(getLider() == true)
-		cout << "Sí" << endl;
-	else
-		cout << "No" << endl;
+	if(s == 2) {
+		cout << "\tDNI: " << getDNI() << endl;
+		cout << "\tTeléfono: " << getTelefono() << endl;
+		cout << "\tEmail: " << getEmail() << endl;
+		cout << "\tDirección: " << getDireccion() << endl;
+		cout << "\tCurso más alto: " << getCurso() << endl;
+		cout << "\tFecha de nacimiento: " << getFecha().d << "-" << getFecha().m << "-" << getFecha().y << endl;
+		cout << "\tGrupo: " << getIDgrupo() << endl;
+		cout << "\tLíder: ";
+	
+		if(getLider() == true)
+			cout << "Sí" << endl;
+		else
+			cout << "No" << endl;
+	}
 	
 }
 

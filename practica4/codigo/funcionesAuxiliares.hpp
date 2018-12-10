@@ -7,5 +7,5 @@
 
 	int menu();
 	void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos);
-
+	void opcionListar(ListaAlumnos & alumnos);
 #endif

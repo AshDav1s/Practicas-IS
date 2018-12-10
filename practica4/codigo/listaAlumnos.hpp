@@ -3,6 +3,7 @@
 
 #include "alumno.hpp"
 #include <vector>
+#include <algorithm>
 
 class ListaAlumnos {
 
@@ -18,7 +19,10 @@ class ListaAlumnos {
 		}
 		
 		// Imprime por pantalla todos los alumnos de la lista
-		void listarAlumnos();
+		void listarAlumnos(int lista, int param, int orden);
+		
+		// Imprime la lista de alumnos en un fichero HTML
+		void listarAlumnosHTML(char * fichero, int lista, int param, int orden);
 		
 		// Inserta un alumno al final de la lista
 		bool insertarAlumno(const Alumno & a);
@@ -48,11 +52,23 @@ class ListaAlumnos {
 		
 		// Devuelve true si la lista de alumnos está vacía
 		inline bool estaVacia() {
-			if(_alumnos.empty() == true)
-				return true;
-			else
-				return false;
+			return _alumnos.empty();
 		}
+
+		void ordenarAlumnos(int parametro, int orden);
 };
+
+bool ordenacionAscendenteNombre(Alumno i, Alumno j);
+bool ordenacionDescendenteNombre(Alumno i, Alumno j);
+bool ordenacionAscendenteApellidos(Alumno i, Alumno j);
+bool ordenacionDescendenteApellidos(Alumno i, Alumno j);
+bool ordenacionAscendenteDNI(Alumno i, Alumno j);
+bool ordenacionDescendenteDNI(Alumno i, Alumno j);
+bool ordenacionAscendenteCurso(Alumno i, Alumno j);
+bool ordenacionDescendenteCurso(Alumno i, Alumno j);
+bool ordenacionAscendenteGrupo(Alumno i, Alumno j);
+bool ordenacionDescendenteGrupo(Alumno i, Alumno j);
+bool ordenacionAscendenteLider(Alumno i, Alumno j);
+bool ordenacionDescendenteLider(Alumno i, Alumno j);
 
 #endif
