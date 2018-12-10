@@ -11,9 +11,8 @@ void ListaAlumnos::listarAlumnos() {
 
 bool ListaAlumnos::insertarAlumno(const Alumno & a) {
 	
-	cout<< getSize()<<endl;
 	_alumnos.push_back(a);
-		cout<< getSize()<<endl;
+	
 	if(existeAlumno(a.getDNI()) == true)
 		return true;
 	else
@@ -73,9 +72,9 @@ bool ListaAlumnos::existeAlumno(string dni) {
 		return false;
 		
 	for(int i=0; i<getSize(); i++) {
-		cout << getSize() << "," << i << endl;
-		//if(_alumnos[i].getDNI() == dni)
-			//return true;
+
+		if(_alumnos[i].getDNI() == dni)
+			return true;
 	}
 	
 	return false;

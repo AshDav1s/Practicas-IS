@@ -1,6 +1,6 @@
 #include "alumno.hpp"
 
-Alumno::Alumno(string dni, string nombre, string apellidos, int telefono, string email, string direccion, int curso, date fecha, int IDgrupo, bool lider) {
+Alumno::Alumno(string dni, string nombre, string apellidos, int telefono, string email, string direccion, int curso, int dia, int mes, int year, int IDgrupo, bool lider) {
 	
 	_dni = dni;
 	_nombre = nombre;
@@ -9,9 +9,9 @@ Alumno::Alumno(string dni, string nombre, string apellidos, int telefono, string
 	_email = email;
 	_direccion = direccion;
 	_curso = curso;
-	_fecha.d = fecha.d;
-	_fecha.m = fecha.m;
-	_fecha.y = fecha.y;
+	_fecha.d = dia;
+	_fecha.m = mes;
+	_fecha.y = year;
 	_IDgrupo = IDgrupo;
 	_lider = lider;
 }
