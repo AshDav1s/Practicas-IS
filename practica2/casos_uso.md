@@ -66,7 +66,7 @@
 **Breve descripción**: El sistema muestra una lista con todos los alumnos.
 
 **Actores principales:** Usuario.  
-**Actores secundarios:** Alumno,
+**Actores secundarios:** Alumno.
 
 **Precondiciones:**
 
@@ -202,7 +202,7 @@
 **Flujos alternativos:**
 
 2.a. Si el fichero no existe, el sistema muestra un mensaje de error.  
-2.b. Si ya existen datos de alumnos en el sistema, éste pregunta si se desea sobreescribir dichos datos.
+2.b. Si ya hay un fichero cargado anteriormente, éste pregunta si se desea sobreescribir dichos datos.
 
 
 

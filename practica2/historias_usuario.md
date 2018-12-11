@@ -29,7 +29,34 @@ Como usuario quiero introducir los datos de un alumno para almacenarlos y poder 
 
 ## (ANVERSO)
 
-**ID:** 002 **Listar alumnos**
+**ID:** 002 **Buscar alumno**
+
+----
+
+Como usuario quiero poder buscar un alumno introducido.
+
+**Prioridad:** 2
+
+----
+
+## (REVERSO)
+
+----
+
+* Quiero poder buscar alumnos a través de 3 de sus parámetros: DNI, Apellidos o email.
+
+* Si hay alumnos con idéntico apellido se mostraran todos ellos.
+
+
+----
+
+----
+
+----
+
+## (ANVERSO)
+
+**ID:** 003 **Listar alumnos**
 
 ----
 
@@ -59,7 +86,7 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 	
 ## (ANVERSO)
 
-**ID:** 003 **Mostrar alumno**
+**ID:** 004 **Mostrar alumno**
 
 ----
 
@@ -88,7 +115,7 @@ Como usuario quiero buscar un alumno para mostrar sus datos.
 
 ## (ANVERSO)
 
-**ID:** 004 **Editar alumno**
+**ID:** 005 **Editar alumno**
 
 ----
 
@@ -117,7 +144,7 @@ Como usuario quiero seleccionar un alumno para poder editar sus datos sin modifi
 
 ## (ANVERSO)
 
-**ID:** 005 **Borrar alumno**
+**ID:** 006 **Borrar alumno**
 
 ----
 
@@ -131,9 +158,8 @@ Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 
 ----
 
-* Quiero poder elegir un alumno segun su DNI, apellidos o email.
+* Quiero poder elegir un alumno segun su DNI o email.
 
-* Será necesario una pregunta de confirmación para eliminar un alumno.
 
 ----
 
@@ -144,7 +170,7 @@ Como usuario quiero seleccionar un alumno para poder borrar sus datos.
 
 ## (ANVERSO)
 
-**ID:** 006 **Cargar fichero**
+**ID:** 007 **Cargar fichero**
 
 ----
 
@@ -170,7 +196,7 @@ Como usuario quiero seleccionar un fichero binario para poder cargar sus datos.
 
 ## (ANVERSO)
 
-**ID:** 007 **Guardar fichero**
+**ID:** 008 **Guardar fichero**
 
 ----
 
@@ -187,3 +213,79 @@ Como usuario quiero seleccionar un nombre de fichero para guardar la lista de al
 * Quiero poder guardar la lista de alumnos actual en un fichero binario.
 
 * El programa preguntará al usuario si quiere sobrescribir el fichero introducido, si procede.
+
+----
+----
+----
+
+## (ANVERSO)
+**ID:** 009 **Guardar copia de seguridad**
+
+----
+
+Como usuario coordinador quiero poder guardar una copia de seguridad en un fichero binario. 
+
+**Prioridad:** 7
+
+----
+
+## (REVERSO)
+
+----
+
+* Quiero poder guardar una copia de seguridad de la lista de alumnos actual en un fichero binario.
+
+* El sistema guardará la copia asignandole un nombre con el siguiente formato: copia_(fecha)_(hora).
+
+----
+----
+----
+
+## (ANVERSO)
+
+**ID:** 010 **Cargar copia de seguridad**
+
+----
+
+Como usuario coordinador quiero poder cargar una copia de seguridad anteriormente almacenada.
+
+**Prioridad:** 7
+
+----
+
+## (REVERSO)
+
+----
+
+* Quiero poder guardar la lista de alumnos actual en un fichero binario.
+
+* El programa preguntará al usuario si quiere sobrescribir el fichero introducido, si procede.
+
+----
+----
+----
+
+## (ANVERSO)
+
+**ID:** 011 **Iniciar sesion**
+
+----
+
+El sistema requerirá el inicio de sesión para acceder al programa y se iniciará en modo coordinador o ayudante. 
+
+**Prioridad:** 6
+
+----
+
+## (REVERSO)
+
+----
+
+* Distinguirá entre coordinador y ayudante.
+
+* Será necesario introducir login y contraseña para acceder al programa.
+
+----
+----
+----
+
