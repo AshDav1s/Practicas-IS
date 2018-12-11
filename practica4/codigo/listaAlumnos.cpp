@@ -15,7 +15,7 @@ void ListaAlumnos::listarAlumnosHTML(char * fichero, int lista, int param, int o
 	
 	ofstream fs(fichero);
 	
-	fs << "<!DOCTYPE html>\n<html>\n<head>\n<title>Lista de alumnos</title>\n</head>\n<body>\n<h1>Lista de alumnos</h1>\n";
+	fs << "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Lista de alumnos</title>\n</head>\n<body>\n<h1>Lista de alumnos</h1>\n";
 	
 	ordenarAlumnos(param, orden);
 	
