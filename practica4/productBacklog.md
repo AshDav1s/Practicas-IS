@@ -6,7 +6,7 @@
 
 **Prioridad: -**
 
-**Duración**: 2.5h
+**Duración**: 1h
 
 **ID**: 002
 
@@ -52,7 +52,7 @@
 
 **Prioridad**: **4**
 
-**Duración**: 2h
+**Duración**: 2.5h
 
 ----
 
@@ -64,7 +64,7 @@
 
 **Prioridad**: **4**
 
-**Duración**: 2h
+**Duración**: 2.5h
 
 ----
 
@@ -88,7 +88,7 @@
 
 **Prioridad**: **6**
 
-**Duración**: 2h
+**Duración**: 1.5h
 
 ----
 
