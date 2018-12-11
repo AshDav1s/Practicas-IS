@@ -88,7 +88,7 @@
 
 **Prioridad**: **6**
 
-**Duración**: 1.5h
+**Duración**: 2.5h
 
 ----
 
