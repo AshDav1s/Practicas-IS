@@ -30,6 +30,7 @@ int main() {
 					
 			case 2: 
 				cout << "[2] Buscar alumno" << endl;
+				opcionMostrar(alumnos);
 			break;
 			
 			case 3: 
@@ -39,10 +40,12 @@ int main() {
 
 			case 4: 
 				cout << "[4] Editar alumno" << endl;
+				opcionEditar(alumnos, grupos);
 			break;
 					
 			case 5: 
 				cout << "[5] Borrar alumno" << endl;
+				opcionBorrar(alumnos, grupos);
 			break;
 					
 			case 6: 

@@ -8,4 +8,8 @@
 	int menu();
 	void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos);
 	void opcionListar(ListaAlumnos & alumnos);
+	void opcionMostrar(ListaAlumnos & alumnos);
+	void opcionEditar(ListaAlumnos & alumnos, ListaGrupos & grupos);
+	void opcionBorrar(ListaAlumnos & alumnos, ListaGrupos & grupos);
+	
 #endif
