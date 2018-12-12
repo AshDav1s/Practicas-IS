@@ -50,10 +50,12 @@ int main() {
 					
 			case 6: 
 				cout << "[6] Cargar fichero" << endl;
+				
 			break;
 			
 			case 7: 
 				cout << "[7] Guardar fichero" << endl;
+				
 			break;
 					
 			default:

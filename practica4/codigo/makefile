@@ -1,5 +1,5 @@
-OBJETOS = main.o alumno.o listaAlumnos.o funcionesAuxiliares.o grupo.o listaGrupos.o
-CPPFLAGS = -c -g -Wall -ansi
+OBJETOS = main.o alumno.o listaAlumnos.o funcionesAuxiliares.o grupo.o listaGrupos.o profesor.o
+CPPFLAGS = -c -g -Wall -ansi -std=c++0x
 
 objetivo: alumnos.exe
 
@@ -31,6 +31,9 @@ listaGrupos.o: listaGrupos.cpp listaGrupos.hpp grupo.hpp
 	@echo Creando listaGrupos.o...
 	@g++ $(CPPFLAGS) listaGrupos.cpp
 	
+profesor.o: profesor.cpp profesor.hpp listaGrupos.hpp
+	@echo Creando profesor.o...
+	@g++ $(CPPFLAGS) profesor.cpp
 	
 .PHONY: clean  
 clean:

@@ -28,7 +28,13 @@ void Alumno::imprimirAlumno(int s) {
 		cout << "\tDirección: " << getDireccion() << endl;
 		cout << "\tCurso más alto: " << getCurso() << endl;
 		cout << "\tFecha de nacimiento: " << getFecha().d << "-" << getFecha().m << "-" << getFecha().y << endl;
-		cout << "\tGrupo: " << getIDgrupo() << endl;
+		cout << "\tGrupo: ";
+		
+		if(getIDgrupo() < 0)
+			cout << "sin grupo" << endl;
+		else
+			cout << getIDgrupo() << endl;
+			
 		cout << "\tLíder: ";
 	
 		if(getLider() == true)

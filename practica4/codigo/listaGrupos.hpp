@@ -31,6 +31,8 @@ class ListaGrupos {
 		inline int estaVacia() {
 			return _grupos.empty();
 		}
+		
+		bool vaciarLista();
 };
 
 #endif

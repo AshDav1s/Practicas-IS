@@ -1,8 +1,7 @@
 #ifndef FUNCIONES_AUXILIARES_HPP
 #define FUNCIONES_AUXILIARES_HPP
 
-#include "listaAlumnos.hpp"
-#include "listaGrupos.hpp"
+#include "profesor.hpp"
 #include "macros.hpp"
 
 	int menu();

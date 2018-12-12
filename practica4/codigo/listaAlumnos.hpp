@@ -18,6 +18,10 @@ class ListaAlumnos {
 			_alumnos.resize(0);
 		}
 		
+		inline const Alumno & getAlumno(int i) {
+			return _alumnos[i];
+		}
+		
 		// Imprime por pantalla todos los alumnos de la lista
 		void listarAlumnos(int lista, int param, int orden);
 		
@@ -56,6 +60,8 @@ class ListaAlumnos {
 		}
 
 		void ordenarAlumnos(int parametro, int orden);
+		
+		bool vaciarLista();
 };
 
 bool ordenacionAscendenteNombre(Alumno i, Alumno j);

@@ -242,12 +242,12 @@ void opcionEditar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 		struct date f;
 		
 		cout << "\n\tFecha de nacimiento: ";
-		cout << "\n\t\tAño: ";
-		cin >> f.y;
-		cout << "\t\tDía: ";
+		cout << "\n\t\tDía: ";
 		cin >> f.d;
 		cout << "\t\tMes: ";
 		cin >> f.m;
+		cout << "\t\tAño: ";
+		cin >> f.y;
 	
 		if(a->setFecha(f) == true)
 			cout << IGREEN << "\n\tFecha de nacimiento modificada correctamente." << RESET << endl;
@@ -556,12 +556,12 @@ void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	cin >> auxiliar;
 	a.setCurso(auxiliar);
 	
-	cout << "\tFecha de nacimiento\n\t\tAño: ";
-	cin >> fecha.y;
-	cout << "\t\tDía: ";
+	cout << "\tFecha de nacimiento\n\t\tDía: ";
 	cin >> fecha.d;
 	cout << "\t\tMes: ";
 	cin >> fecha.m;
+	cout << "\t\tAño: ";
+	cin >> fecha.y;
 	a.setFecha(fecha);
 	
 	do {
@@ -578,6 +578,14 @@ void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 		
 		cout << "\n\tID del grupo: ";
 		cin >> auxiliar;
+		
+		while(auxiliar < 0) {
+			 
+			cout << IRED << "\n\tID de grupo negativo." << RESET << endl;
+			cout << "\n\tID del grupo: ";
+			cin >> auxiliar;
+		}
+		
 		a.setIDgrupo(auxiliar);
 		
 		if(grupos.existeGrupo(auxiliar) == false)

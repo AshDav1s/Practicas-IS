@@ -35,3 +35,16 @@ bool ListaGrupos::existeGrupo(int id) {
 	
 	return false;
 }
+
+bool ListaGrupos::vaciarLista() {
+	
+	for(int i=0; i<getSize(); i++)
+		_grupos[i].vaciarLista();
+		
+	_grupos.clear();
+		
+	if(estaVacia())
+		return true;
+	else
+		return false;
+}

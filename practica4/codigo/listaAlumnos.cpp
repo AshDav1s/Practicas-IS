@@ -33,7 +33,13 @@ void ListaAlumnos::listarAlumnosHTML(char * fichero, int lista, int param, int o
 			fs << "<b>Dirección:</b> " << _alumnos[i].getDireccion() << "<br>";
 			fs << "<b>Curso más alto:</b> " << _alumnos[i].getCurso() << "<br>";
 			fs << "<b>Fecha de nacimiento:</b> " << _alumnos[i].getFecha().d << "-" << _alumnos[i].getFecha().m << "-" << _alumnos[i].getFecha().y << "<br>";
-			fs << "<b>Grupo:</b> " << _alumnos[i].getIDgrupo() << "<br>";
+			fs << "<b>Grupo:</b> ";
+			
+			if(_alumnos[i].getIDgrupo() < 0)
+				fs << "sin grupo <br>";
+			else
+				fs << _alumnos[i].getIDgrupo() << "<br>";
+			
 			fs << "<b>Líder:</b> ";
 		
 			if(_alumnos[i].getLider() == true)
@@ -199,6 +205,16 @@ void ListaAlumnos::ordenarAlumnos(int parametro, int orden) {
 		else
 			sort(_alumnos.begin(), _alumnos.end(), ordenacionDescendenteLider);
 	}
+}
+
+bool ListaAlumnos::vaciarLista() {
+	
+	_alumnos.clear();
+	
+	if(estaVacia())
+		return true;
+	else
+		return false;
 }
 
 bool ordenacionAscendenteNombre(Alumno i, Alumno j) {
