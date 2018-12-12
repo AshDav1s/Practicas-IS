@@ -616,7 +616,19 @@ void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 		else
 			cout << IRED << "\n\tError al insertar alumno.\n"  << RESET << endl;
 	}
+	
+	else {
+		
+		a.setIDgrupo(-1);
+		a.setLider(NULL);
+		bool check = alumnos.insertarAlumno(a);		
 
+		if(check == true)
+			cout << IGREEN << "\n\tAlumno insertado correctamente.\n" << RESET << endl;
+		else
+			cout << IRED << "\n\tError al insertar alumno.\n"  << RESET << endl;
+	}
+	
 	cin.ignore();
 }
 
