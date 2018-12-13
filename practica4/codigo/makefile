@@ -1,7 +1,15 @@
 OBJETOS = main.o alumno.o listaAlumnos.o funcionesAuxiliares.o grupo.o listaGrupos.o profesor.o
 CPPFLAGS = -c -g -Wall -ansi -std=c++0x
 
-objetivo: alumnos.exe
+objetivo: alumnos.exe usuarios.exe
+
+usuarios.exe: usuarios.o
+	@echo Creando usuarios.o...
+	@g++ -o usuarios.exe usuarios.o
+	
+usuarios.o: usuarios.cpp
+	@echo Creando usuarios.o...
+	@g++ $(CPPFLAGS) usuarios.cpp 
 
 alumnos.exe: $(OBJETOS)
 	@echo Creando ejecutable...
@@ -34,8 +42,8 @@ listaGrupos.o: listaGrupos.cpp listaGrupos.hpp grupo.hpp
 profesor.o: profesor.cpp profesor.hpp listaGrupos.hpp
 	@echo Creando profesor.o...
 	@g++ $(CPPFLAGS) profesor.cpp
-	
+
 .PHONY: clean  
 clean:
 	@echo Eliminando objetos...
-	@rm -f $(OBJETOS) *~ s
+	@rm -f *.o *~ s

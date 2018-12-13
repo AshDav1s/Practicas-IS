@@ -48,7 +48,6 @@ bool Profesor::cargarFichero(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 bool saveFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos) {
 
 	struct alumnoAux a;
-		struct alumnoAux b;
 	
 	ofstream fsalida(fichero.c_str(), ios::out | ios::binary);
 	
@@ -84,8 +83,7 @@ bool saveFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos) {
 		a.lider = alumnos.getAlumno(i).getLider();
 		
 		fsalida.write((char*)&a, sizeof(struct alumnoAux));
-		
-		cout << b.nombre << endl;
+
 	}
 	
 	fsalida.close();

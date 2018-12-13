@@ -5,6 +5,20 @@ int main() {
 	int opcion;
 	ListaAlumnos alumnos;
 	ListaGrupos grupos;
+	Profesor p;
+	int sesion;
+	
+	sesion = inicioSesion(p);
+	
+	if(sesion == -1) {
+		cout << IRED << "\n\tEl nombre de usuario no existe.\n";
+		return 0;
+	}
+	
+	if(sesion == -2) {
+		cout << IRED << "\n\tContraseña incorrecta.\n";
+		return 0;
+	}
 	
 	do {
 
@@ -55,7 +69,11 @@ int main() {
 			
 			case 7: 
 				cout << "[7] Guardar fichero" << endl;
+			
+			case 8:
+				cout << "[8] Guardar copia de seguridad" << endl;
 				
+					
 			break;
 					
 			default:

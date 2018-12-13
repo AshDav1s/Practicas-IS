@@ -640,7 +640,52 @@ void opcionInsertar(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	cin.ignore();
 }
 
+int inicioSesion(Profesor & p) {
 	
+	char nombre[100];
+	char password[100];
+	struct usuario u;
+	bool encontrado = false;
+	bool coincidencia = false;
+	
+	cout << "\n\tNombre de usuario: ";
+	cin.getline(nombre, 100);
+	
+	ifstream fentrada("usuarios.bin", ios::in | ios::binary);
+	
+	fentrada.read((char*)&u, sizeof(struct usuario));
+	
+	while(!fentrada.eof()) {
+		
+		if(strcmp(u.nombre, nombre) == 0) {
+			
+			cout << "\tContraseña: ";
+			cin.getline(password, 100);
+			
+			if(strcmp(u.password, password) == 0) {
+				coincidencia = true;
+			}
+			
+			encontrado = true;
+			break;
+		}
+		
+		fentrada.read((char*)&u, sizeof(struct usuario));
+	}
+	
+	fentrada.close();
+	
+	if(encontrado == false)
+		return -1;
+		
+	if(coincidencia == false)
+		return -2;
+		
+	p.setCoordinador(u.coordinador);
+	
+	return 1;
+}
+
 int menu() {
 	
 	int opcion, posicion;
