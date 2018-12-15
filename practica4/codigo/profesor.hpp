@@ -3,38 +3,50 @@
 
 #include <fstream>
 #include "listaGrupos.hpp"
+#include "listaAlumnos.hpp"
 
 class Profesor {
 
 	private:
 	
-		string _fichero;
-		bool _coordinador;
+		string _fichero;		// Nombre del fichero con el que se va a trabajar
+		bool _coordinador;	// Indica si el usuario tiene permiso de coordinador o no
 			
 	public:
 		
+		// Contructor
 		Profesor(string fichero="", bool coordinador=false);
 		
-		inline string getFichero() {
+		// Devuelve el nombre del fichero
+		inline string getFichero() const {
 			return _fichero;
 		}
 		
-		inline bool getCoordinador() {
+		// Devuelve el valor del parámetro coordinador
+		inline bool getCoordinador() const {
 			return _coordinador;
 		}
 		
+		// Cambia el nombre del fichero
 		bool setFichero(string fichero);
 		
+		// Cambia el parámetro coordinador
 		bool setCoordinador(bool coordinador);
 		
-		bool guardarFichero(ListaAlumnos & alumnos, ListaGrupos & grupos);
+		// Guarda la información en el fichero
+		bool guardarFichero(ListaAlumnos & alumnos);
 		
-		bool guardarCopia(ListaAlumnos & alumnos, ListaGrupos & grupos);
+		// Guarda una copia de seguridad
+		bool guardarCopia(ListaAlumnos & alumnos);
 		
+		// Carga la información del fichero
 		bool cargarFichero(ListaAlumnos & alumnos, ListaGrupos & grupos); 
+
 };
 
-bool saveFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos);
+// Funciones y estructura auxiliares para el manejo de ficheros
+
+bool saveFile(string fichero,  ListaAlumnos & alumnos);
 bool loadFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos);
 
 struct alumnoAux {

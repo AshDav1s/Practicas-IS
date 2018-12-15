@@ -21,6 +21,7 @@ void Alumno::imprimirAlumno(int s) {
 	cout << "\tNombre: " << getNombre() << endl;
 	cout << "\tApellidos: " << getApellidos() << endl;
 	
+	// Si se va a imprimir la versión completa, se imprimen el resto de parámetros
 	if(s == 2) {
 		cout << "\tDNI: " << getDNI() << endl;
 		cout << "\tTeléfono: " << getTelefono() << endl;

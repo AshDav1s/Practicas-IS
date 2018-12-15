@@ -28,15 +28,16 @@ bool Profesor::setCoordinador(bool coordinador) {
 		return false;
 }
 
-bool Profesor::guardarFichero(ListaAlumnos & alumnos, ListaGrupos & grupos) {
+bool Profesor::guardarFichero(ListaAlumnos & alumnos) {
 
-	bool returnValue = saveFile(getFichero(), alumnos, grupos);
+	bool returnValue = saveFile(getFichero(), alumnos);
 	
 	return returnValue;
 }
 		
 bool Profesor::cargarFichero(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	
+	// Antes de cargar información nueva se borra la actual
 	alumnos.vaciarLista();
 	grupos.vaciarLista();
 	
@@ -45,15 +46,17 @@ bool Profesor::cargarFichero(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	return returnValue;
 }
 		
-bool saveFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos) {
+bool saveFile(string fichero, ListaAlumnos & alumnos) {
 
 	struct alumnoAux a;
 	
+	// Se abre el fichero de salida
 	ofstream fsalida(fichero.c_str(), ios::out | ios::binary);
 	
 	if(fsalida.is_open() == false)
 		return false;
 	
+	// Se recorre la lista de alumnos leyendo sus parámetros
 	for(int i=0; i<alumnos.getSize(); i++) {
 		
 		strncpy(a.dni, alumnos.getAlumno(i).getDNI().c_str(), 9);
@@ -82,20 +85,23 @@ bool saveFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos) {
 		a.grupo = alumnos.getAlumno(i).getIDgrupo();
 		a.lider = alumnos.getAlumno(i).getLider();
 		
+		// Se escribe la información del alumno en el fichero
 		fsalida.write((char*)&a, sizeof(struct alumnoAux));
 
 	}
 	
+	// Se cierra el fichero
 	fsalida.close();
 	
 	return true;
 }
 
-bool Profesor::guardarCopia(ListaAlumnos & alumnos, ListaGrupos & grupos) {
+bool Profesor::guardarCopia(ListaAlumnos & alumnos) {
 	
 	time_t current_time;
 	struct tm * local_time;
 
+	// Obtenemos la fecha actual
 	time ( &current_time );
 	local_time = localtime(&current_time);
 
@@ -107,28 +113,32 @@ bool Profesor::guardarCopia(ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	int Min    = local_time->tm_min;
 	int Sec    = local_time->tm_sec;
 	
+	// Asignamos nombre a la copia (copia_fecha_hora)
 	string fichero = "copia_" + to_string(Year) + "-" + to_string(Month) + "-" + to_string(Day) + "_" + to_string(Hour) + ":" + to_string(Min) + ":" + to_string(Sec);
 	
-	bool returnValue = saveFile(fichero, alumnos, grupos);
+	// Guardamos
+	bool returnValue = saveFile(fichero, alumnos);
 	
 	return returnValue;
 }
-		
+
 bool loadFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos) {
 	
 	struct alumnoAux a;
 	
+	// Se abre el fichero de entrada
 	ifstream fentrada(fichero.c_str(), ios::in | ios::binary);
 	
 	if(fentrada.is_open() == false)
 		return false;
 	
+	// Se lee el fichero registro a registro
 	fentrada.read((char *)&a, sizeof(struct alumnoAux));
 	
 	do {
 		
+		// Creamos e insertamos un nuevo alumno con la información leída
 		Alumno alumnoNuevo(a.dni, a.nombre, a.apellidos, a.telefono, a.email, a.direccion, a.curso, a.d, a.m, a.y, a.grupo, a.lider);	
-		
 		alumnos.insertarAlumno(alumnoNuevo);
 		
 		if(a.grupo >= 0) {// El alumno tiene grupo
@@ -137,17 +147,17 @@ bool loadFile(string fichero, ListaAlumnos & alumnos, ListaGrupos & grupos) {
 				grupos.crearGrupo(a.grupo);
 				
 			Grupo * g = grupos.buscarGrupo(a.grupo);
-			g->insertarAlumno(alumnoNuevo);
+			g->insertarAlumno(a.dni);
 			
 			if(a.lider == true)
-				g->setLider(alumnos.buscarAlumno(a.dni));
+				g->setLider(a.dni);
 		}
 		
 		fentrada.read((char *)&a, sizeof(struct alumnoAux));
 		
 	} while(!fentrada.eof());
 
-	fentrada.close();
+	fentrada.close(); // Se cierra el fichero
 	
 	return true;
 }

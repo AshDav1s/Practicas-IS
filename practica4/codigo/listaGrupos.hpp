@@ -7,12 +7,13 @@ class ListaGrupos {
 	
 	private:
 	
-		vector<Grupo> _grupos;
+		vector<Grupo> _grupos;	// Vector con todos los grupos
 		
 	public:
-	
-		ListaGrupos(){}
 		
+		// Constructor vacío
+		ListaGrupos(){}
+
 		// Busca un grupo por su ID
 		Grupo * buscarGrupo(int id);
 		
@@ -20,18 +21,22 @@ class ListaGrupos {
 		bool crearGrupo(int id);
 		
 		// Devuelve si un grupo existe o no
-		bool existeGrupo(int id);
+		bool existeGrupo(int id) const;
 		
 		// Devuelve el número de grupos
-		inline int getSize() {
+		inline int getSize() const {
 			return _grupos.size();
 		}
 		
 		// Devuelve si la lista de grupos está vacía
-		inline int estaVacia() {
+		inline int estaVacia() const {
 			return _grupos.empty();
 		}
 		
+		// Elimina un grupo
+		bool eliminarGrupo(int id);
+		
+		// Elimina todos los grupos
 		bool vaciarLista();
 };
 

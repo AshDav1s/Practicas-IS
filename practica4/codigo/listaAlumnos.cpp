@@ -2,8 +2,10 @@
 
 void ListaAlumnos::listarAlumnos(int lista, int param, int orden) {
 	
+	// Antes de listar, se ordena el vector según el parámetro y el orden (asc o desc)
 	ordenarAlumnos(param, orden);
 	
+	// Se recorre el vector imprimiendo alumno a alumno
 	for(int i=0; i<getSize(); i++) {
 		
 		_alumnos[i].imprimirAlumno(lista);
@@ -17,8 +19,10 @@ void ListaAlumnos::listarAlumnosHTML(char * fichero, int lista, int param, int o
 	
 	fs << "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Lista de alumnos</title>\n</head>\n<body>\n<h1>Lista de alumnos</h1>\n";
 	
+	// Antes de listar, se ordena el vector según el parámetro y el orden (asc o desc)
 	ordenarAlumnos(param, orden);
 	
+	// Se recorre el vector imprimiendo alumno a alumno
 	for(int i=0; i<getSize(); i++) {
 		
 		fs << "<p>";
@@ -57,6 +61,7 @@ void ListaAlumnos::listarAlumnosHTML(char * fichero, int lista, int param, int o
 
 bool ListaAlumnos::insertarAlumno(const Alumno & a) {
 	
+	// Insertamos al final del vector
 	_alumnos.push_back(a);
 	
 	if(existeAlumno(a.getDNI()) == true)
@@ -67,8 +72,10 @@ bool ListaAlumnos::insertarAlumno(const Alumno & a) {
 
 bool ListaAlumnos::eliminarAlumno(string dni) {
 	
+	// Se recorre el vector buscando al alumno a eliminar
 	for(int i=0; i<getSize(); i++) {
 		
+		// Una vez encontrado se elimina
 		if(_alumnos[i].getDNI() == dni) {
 			
 			_alumnos.erase(_alumnos.begin() + i);
@@ -86,54 +93,64 @@ Alumno * ListaAlumnos::buscarAlumno(string dni) {
 	
 	Alumno * a;
 	
+	// Se recorre el vector buscando al alumno
 	for(int i=0; i<getSize(); i++) {
-		
+
+		// Si se encuentra se asigna en "a"
 		if(_alumnos[i].getDNI() == dni) {
 			a = &_alumnos[i];
 			break;
 		}
 	}
 	
-	return a;
+	return a; // Devolvemos el alumno
 }
 
-Alumno *  ListaAlumnos::buscarAlumnoEmail(string email) {
+Alumno * ListaAlumnos::buscarAlumnoEmail(string email) {
 	
 	Alumno * a;
 	
+	// Se recorre el vector buscando al alumno
 	for(int i=0; i<getSize(); i++) {
 		
+		// Si se encuentra se asigna en "a"
 		if(_alumnos[i].getEmail() == email) {
 			a = &_alumnos[i];
 			break;
 		}
 	}
 	
-	return a;
+	return a; // Devolvemos el alumno
 }
 
 bool ListaAlumnos::existeAlumno(string dni) {
 	
-	if(estaVacia())
+	if(estaVacia()) // Si la lista no tiene alumnos devolvemos false
 		return false;
 		
+	// Recorremos buscando al alumno
 	for(int i=0; i<getSize(); i++) {
-
+	
+		// Si lo encontramos devolvemos true
 		if(_alumnos[i].getDNI() == dni)
 			return true;
 	}
 	
+	// Si no lo encontramos devolvemos false
 	return false;
 }
 
 bool ListaAlumnos::existeAlumnoEmail(string email) {
 	
+	// Recorremos buscando al alumno
 	for(int i=0; i<getSize(); i++) {
-		
+
+		// Si lo encontramos devolvemos true
 		if(_alumnos[i].getEmail() == email)
 			return true;
 	}
 	
+	// Si no lo encontramos devolvemos false
 	return false;
 }
 
@@ -141,17 +158,31 @@ vector<Alumno> ListaAlumnos::buscarAlumnoApellidos(string apellidos) {
 
 	vector<Alumno> v;
 	
+	// Recorremos el vector buscando alumnos que coincidan
 	for(int i=0; i<getSize(); i++) {
 		
+		// Cada vez que encontramos un alumno que coincida lo insertamos en un vector
 		if(_alumnos[i].getApellidos() == apellidos)
 			v.push_back(_alumnos[i]);
 	}
 	
-	return v;
+	return v; // Devolvemos el vector con todos los alumnos encontrados
+}
+
+bool ListaAlumnos::vaciarLista() {
+	
+	_alumnos.clear(); // Limpiamos el vector
+	
+	if(estaVacia())
+		return true;
+	else
+		return false;
 }
 
 void ListaAlumnos::ordenarAlumnos(int parametro, int orden) {
-
+	
+	// Segun el parámetro y el tipo de orden llamaremos a una función un otra
+	
 	if(parametro == 1) {
 	 	
 	 	if(orden == 1)
@@ -207,15 +238,7 @@ void ListaAlumnos::ordenarAlumnos(int parametro, int orden) {
 	}
 }
 
-bool ListaAlumnos::vaciarLista() {
-	
-	_alumnos.clear();
-	
-	if(estaVacia())
-		return true;
-	else
-		return false;
-}
+// Funciones auxiliares para utilizar sort()
 
 bool ordenacionAscendenteNombre(Alumno i, Alumno j) {
 	return i.getNombre() < j.getNombre();

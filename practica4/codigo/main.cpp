@@ -8,13 +8,16 @@ int main() {
 	Profesor p;
 	int sesion;
 	
+	// Se inicia sesión
 	sesion = inicioSesion(p);
 	
+	// Si el usuario no existe
 	if(sesion == -1) {
 		cout << IRED << "\n\tEl nombre de usuario no existe.\n";
 		return 0;
 	}
 	
+	// Si la contraseña no existe
 	if(sesion == -2) {
 		cout << IRED << "\n\tContraseña incorrecta.\n";
 		return 0;
@@ -48,32 +51,43 @@ int main() {
 			break;
 			
 			case 3: 
-				cout << "[3] Insertar alumno nuevo" << endl;
+				cout << "[3] Mostrar grupo" << endl;
+				opcionVerGrupo(alumnos, grupos);
+			break;
+			
+			case 4: 
+				cout << "[4] Insertar alumno nuevo" << endl;
 				opcionInsertar(alumnos, grupos);
 			break;
 
-			case 4: 
-				cout << "[4] Editar alumno" << endl;
+			case 5: 
+				cout << "[5] Editar alumno" << endl;
 				opcionEditar(alumnos, grupos);
 			break;
 					
-			case 5: 
-				cout << "[5] Borrar alumno" << endl;
+			case 6: 
+				cout << "[6] Borrar alumno" << endl;
 				opcionBorrar(alumnos, grupos);
 			break;
 					
-			case 6: 
-				cout << "[6] Cargar fichero" << endl;
-				
+			case 7: 
+				cout << "[7] Cargar fichero" << endl;
+				opcionCargar(alumnos, grupos, p);
 			break;
 			
-			case 7: 
-				cout << "[7] Guardar fichero" << endl;
+			case 8: 
+				cout << "[8] Guardar fichero" << endl;
+				opcionGuardar(alumnos, p);
+			break;
 			
-			case 8:
-				cout << "[8] Guardar copia de seguridad" << endl;
-				
-					
+			case 9:
+				cout << "[9] Guardar copia de seguridad" << endl;
+				opcionGuardarCopia(alumnos, p);
+			break;
+			
+			case 10:
+				cout << "[10] Cargar copia de seguridad" << endl;
+				opcionCargarCopia(alumnos, grupos, p);
 			break;
 					
 			default:

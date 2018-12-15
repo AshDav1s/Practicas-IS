@@ -33,7 +33,7 @@ class Alumno {
 		// Constructor
 		Alumno(string dni="", string nombre="", string apellidos="", int telefono=-1, string email="", string direccion="", int curso=-1, int dia=-1, int mes=-1, int year=-1, int IDgrupo = -1, bool lider = false);
 		
-		// Imprime por pantalla los atributos del alumno
+		// Imprime por pantalla los atributos del alumno (s=1 sólo nombre y apellidos, s=2 versión completa)
 		void imprimirAlumno(int s);
 		
 		// Funciones "get". Devuelven el valor de cada uno de los atributos del alumno
@@ -78,7 +78,7 @@ class Alumno {
 			return _lider;
 		}
 		
-		// Funciones "set". Modifican el valor de cada uno de los atributos del alumno.
+		// Funciones "set". Modifican el valor de cada uno de los atributos del alumno. Devuelven true si se modifica correctamente.
 		
 		bool setDNI(string dni);
 		bool setNombre(string nombre);

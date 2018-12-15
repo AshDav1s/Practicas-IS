@@ -9,7 +9,7 @@ class ListaAlumnos {
 
 	private:
 		
-		vector<Alumno> _alumnos;
+		vector<Alumno> _alumnos;	// Vector con todos los alumnos de la lista
 		
 	public:
 		
@@ -18,14 +18,21 @@ class ListaAlumnos {
 			_alumnos.resize(0);
 		}
 		
+		// Devuelve un alumno según su posición en el vector de alumnos
 		inline const Alumno & getAlumno(int i) {
 			return _alumnos[i];
 		}
 		
-		// Imprime por pantalla todos los alumnos de la lista
+		// Imprime por pantalla todos los alumnos de la lista. 
+		// lista: 1 si la lista es simple (nombre y apellidos) y 2 si la lista es completa
+		// param: parámetro de ordenación de la lista
+		// orden: 1 ascendente, 2 descendente
 		void listarAlumnos(int lista, int param, int orden);
 		
 		// Imprime la lista de alumnos en un fichero HTML
+		// lista: 1 si la lista es simple (nombre y apellidos) y 2 si la lista es completa
+		// param: parámetro de ordenación de la lista
+		// orden: 1 ascendente, 2 descendente
 		void listarAlumnosHTML(char * fichero, int lista, int param, int orden);
 		
 		// Inserta un alumno al final de la lista
@@ -59,10 +66,16 @@ class ListaAlumnos {
 			return _alumnos.empty();
 		}
 
+		// Ordena el vector de alumnos
+		// param: parámetro de ordenación de la lista
+		// orden: 1 ascendente, 2 descendente
 		void ordenarAlumnos(int parametro, int orden);
 		
+		// Elimina todos los alumnos
 		bool vaciarLista();
 };
+
+// Funciones auxiliares para la ordenación con sort()
 
 bool ordenacionAscendenteNombre(Alumno i, Alumno j);
 bool ordenacionDescendenteNombre(Alumno i, Alumno j);
