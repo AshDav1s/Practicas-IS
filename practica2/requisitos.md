@@ -40,6 +40,12 @@
 	
 La ordenación se podrá realizar tanto de forma ascendente como descendente.
 
+* **RF7:** Se pedirá un login para iniciar sesión en el programa. En él, se distinguirá entre 2 tipos de usuario:
+
+	* Coordinador
+	* Ayudante
+
+
 ### REQUISITOS NO FUNCIONALES
 
 * **RNF1:** El software deberá funcionar en sistemas operativos Linux.
@@ -54,7 +60,7 @@ La ordenación se podrá realizar tanto de forma ascendente como descendente.
 	* **RNF5.1:** La interfaz será lo más sencilla y usable posible.
 	* **RNF5.2:** La interfaz constará de un menú principal que permita acceder a las demás funcionalidades del programa.
 
-* **RNF6:** Se dispondrá de un software diferente para cada profesor, de manera que no será necesario un login.
+* **RNF6:** Si el usuario es coordinador, tendrá la opcion de guardar copias de seguridad, así como de cargar la anteriormente almacenadas.
 
 * **RNF7:** Los grupos no tendrán un límite de alumnos.
 
@@ -75,7 +81,7 @@ La ordenación se podrá realizar tanto de forma ascendente como descendente.
 
 * **RNF11:** El programa imprimirá las listas solicitadas por línea de comandos o en un fichero HTML.
 
-* **RNF12:** No se permitirá introducir dos alumnos con el mismo DNI, por tanto este se utilizará como identificador principal de los alumnos.
+* **RNF12:** No se permitirá introducir dos alumnos con el mismo DNI ni con el mismo email, por tanto estos se utilizarán como identificador principal de los alumnos.
 
 * **RNF13:** El lenguaje utilizado para implementar el software debe ser C++.
 

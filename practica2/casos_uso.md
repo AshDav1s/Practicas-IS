@@ -26,7 +26,7 @@
 **Flujos alternativos:**
 
 2.a. Si el alumno introducido es líder del grupo, se preguntará si se desea sobreescribir el anterior líder en caso de que este exista.  
-3.a. Si ya existe un alumno con el DNI introducido para el nuevo alumno, el sistema muestra un mensaje de error y el alumno no se introduce.  
+3.a. Si ya existe un alumno con el DNI o email introducido para el nuevo alumno, el sistema muestra un mensaje de error y el alumno no se introduce.  
 3.b. Si el valor de alguno de los campos del alumno no es válido, el sistema muestra un mensaje de error y el alumno no se introduce.
 
 
@@ -96,7 +96,7 @@
 **ID:** 004  
 **Breve descripción**: El sistema muestra los datos de un alumno concreto.
 
-**Actores principales:** Usuario.  
+**Actores principales:** Ninguno.  
 **Actores secundarios:** Alumno.
 
 **Precondiciones:** 
@@ -313,3 +313,30 @@
 **Flujos alternativos:**
 
 1.a. Si el login o la contraseña introducidos no están dentro del fichero de login, el sistema muestra un mensaje de error.
+
+
+### Mostrar grupo
+
+**ID:** 012  
+**Breve descripcion:** El sistema mostrará un grupo y los alumnos que lo componen.
+
+**Actores principales:** Usuario.  
+**Actores secundarios:** Alumno.
+
+**Precondiciones:** 
+
+1. El grupo debe haber sido creado anteriormente al asignarle algún alumno al mismo.
+
+**Flujo principal:** 
+
+1. El caso de uso comienza cuando el sistema necesita buscar un grupo.
+2. El sistema pregunta el ID del grupo que se quiere mostrar.
+3. El sistema busca al grupo correspondiente.
+
+**Postcondiciones:**
+
+* Se muestra por pantalla el grupo, con su ID y los alumnos que lo componen.
+
+**Flujos alternativos:**
+
+3.a. Si el ID del grupo introducido no existe, el sistema mostrará un mensaje de error.

@@ -20,6 +20,8 @@ Como usuario quiero introducir los datos de un alumno para almacenarlos y poder 
 
 * De forma opcional, quiero poder introducir el equipo y si es líder o no.
 
+* No se aceptarán DNI o email que ya existan.
+
 ----
 
 ----
@@ -90,7 +92,7 @@ Como usuario quiero ver una lista con todos los alumnos introducidos.
 
 ----
 
-Como usuario quiero buscar un alumno para mostrar sus datos.
+Tras buscar un alumno (ID 002) se mostrarán sus datos.
 
 **Prioridad:** 3
 
@@ -288,4 +290,29 @@ El sistema requerirá el inicio de sesión para acceder al programa y se iniciar
 ----
 ----
 ----
+
+## (ANVERSO)
+
+**ID:** 012 **Mostrar grupo**
+
+----
+
+El sistema mostrará un grupo y sus alumnos. 
+
+**Prioridad:** 6
+
+----
+
+## (REVERSO)
+
+----
+
+* Indicará que alumno del grupo es el líder (si lo tiene).
+
+* Se buscará el grupo por su ID.
+
+----
+----
+----
+
 
