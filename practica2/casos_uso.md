@@ -256,7 +256,7 @@
 
 **Flujos alternativos:**
 
-2.a. Si el fichero a guardar ya existe, el sistema pregunta si se desea sobreescribir el archivo.
+2.a. El fichero se guardará con siguiente formato: copia_(fecha)_(hora).
 
 
 
